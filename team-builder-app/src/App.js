@@ -17,7 +17,7 @@ const teamMembersList = [{
 
 
 function App() {
-  const [ setTeamMembers ] = useState(teamMembersList)
+  const [ teamMembers, setTeamMembers ] = useState(teamMembersList)
   
 //  card format
   const addMemberToCard = memCard => {
@@ -37,7 +37,7 @@ function App() {
       <h1 className="header">Enter Your Team Members</h1>
       <div className="form-container">
       <Form addMember={addMemberToCard} />
-      <MemberCard teamMembers={teamMembersList} />
+      <MemberCard teamMembers={teamMembers} />
       </div>
     </div>
   );

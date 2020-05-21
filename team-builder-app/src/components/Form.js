@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 
 
 function Form(props) {
-    console.log(props)
 
     const [ formValue, setFormValue ] = useState({
         fname:"",
@@ -15,7 +14,7 @@ function Form(props) {
     })
 
     const handleChanges = e => {
-        setFormValue({[e.target.name]: e.target.value}, ...formValue)
+        setFormValue({ ...formValue, [e.target.name]: e.target.value})
     }
 
     const submitForm = e => {
